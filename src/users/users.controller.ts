@@ -30,5 +30,14 @@ export class UsersController {
   remove(@Param('id') id: number) {
     return this.usersService.deleteUser(id);
   }
-}
 
+  @Post('login')
+  async login(@Body() body) {
+    const isValid = await this.usersService.validateUserPassword(body.name, body.password);
+    if (isValid) {
+      return { message: 'Login successful' };
+    } else {
+      return { message: 'Invalid credentials' };
+    }
+  }
+}
