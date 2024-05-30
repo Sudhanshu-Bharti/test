@@ -17,13 +17,7 @@ DATABASE_PASSWORD="your_password"
 DATABASE_NAME="db_name"
 
 ```
-
-## 3.Step: Running the app
-
-```bash
-$ npm run start
-```
-## 4.Step: Create the Required Tables in PostgresSQL
+## 3.Step: Create the Required Tables in PostgresSQL
 
 ```bash
   -- Users table
@@ -42,7 +36,13 @@ CREATE TABLE WalletAddress (
 );
 ```
 
+## 4.Step: Running the app
 
+```bash
+$ npm run start
+```
+
+### IMPORTANT: 
 ## For API Documentation and Reference:
 http://localhost:3000/api
 ( check your local server instance)
